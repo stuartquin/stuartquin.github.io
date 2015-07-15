@@ -2,8 +2,8 @@
     background-color: #eeeeee;
     height: 100%;
 
+    padding: 40px;
     padding-top: 80px;
-    padding-bottom: 40px;
 }
 
 h1 {
@@ -19,11 +19,16 @@ h3 {
   font-size: 18px;
 }
 
-.about {
+.info-section {
+  margin-bottom: 30px;
 }
 
-.about p {
+.info-section p {
     color: #787878;
+}
+
+.contact {
+    font-size: 28px;
 }
 
 .tagline {
