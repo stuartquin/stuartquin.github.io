@@ -64,5 +64,15 @@ h3 {
 }
 
 .experience {
-   text-align: center;
+  text-align: left;
+}
+
+.experience-employment {
+  text-align: left;
+}
+
+.experience-entry {
+  text-align: left;
+  margin-top: 20px;
+  height: 150px;
 }
