@@ -1,9 +1,5 @@
 /* --------------------------------------------
 	
-	main.css : main style file
-	Project : cvCard
-	Author : pixelwars 
-	
 	---
 	
 	CONTEXT:
@@ -20,6 +16,34 @@
 	8. THEME
 	
    -------------------------------------------- */
+
+
+.project {
+  padding: 16px;
+  margin-bottom: 3em;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.project h4 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.project h5 {
+  margin: 0;
+  padding: 0 0 .3em 0;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #d1dbdc;
+}
+
+.contact-linkedin {
+  font-size: 1.5em !important;
+  padding: 6px 8px !important;
+}
    
    
    
@@ -682,7 +706,7 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 
 /* ROTATE WORDS */
 .rotate-words {
-	display: inline-block; min-width: 180px; min-height: 34px; text-align: left; text-indent: 6px;
+	display: inline-block; min-width: 145px; min-height: 34px; text-align: left; text-indent: 6px;
 	}
 .rotate-words span {
 	position: absolute; opacity: 0; overflow: hidden; font-weight: 800; letter-spacing: -2px;
@@ -930,7 +954,6 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
  	margin: 0 0 .6em 0; font-size: 2.6em; font-weight: 400; line-height: 120%; font-family: 'Tangerine', serif; color: #D0DADC;
 	}
 .letter-info {
- 	margin-left: 130px;
 	}
 	.letter-info p i {
  		display: inline-block; padding: 4px 6px; font-size: 18px; color: #fff; background: #5BCF80; margin: 0 14px 10px 0; border-radius: 50%;
