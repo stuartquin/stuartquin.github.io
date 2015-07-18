@@ -14,6 +14,29 @@ var $container, $blog_container;
 
 
 (function ($) {
+	$(function() {
+  window.mobilecheck = function() {
+  var check = false;
+  return check;
+}
+		// ------------------------------
+		// Rotating Words
+		var rotate_words = $('.rotate-words');
+		if(rotate_words.length && Modernizr.csstransforms) {
+			rotate_words.find('span').eq(0).addClass('active');
+			setInterval(function(){
+				next_word_index = rotate_words.find('.active').next().length ? rotate_words.find('.active').next().index() : 0;
+				rotate_words.find('.active').addClass('rotate-out').removeClass('rotate-in active');
+				rotate_words.find('span').eq(next_word_index).addClass('rotate-in active').removeClass('rotate-out');
+			},3000);
+		}
+  });
+
+})(jQuery);
+
+
+
+(function ($) {
 	
 	
 	/* DOCUMENT LOAD */
@@ -32,17 +55,6 @@ var $container, $blog_container;
 		// ------------------------------
 		
 		
-		// ------------------------------
-		// Rotating Words
-		var rotate_words = $('.rotate-words');
-		if(rotate_words.length && Modernizr.csstransforms) {
-			rotate_words.find('span').eq(0).addClass('active');
-			setInterval(function(){
-				next_word_index = rotate_words.find('.active').next().length ? rotate_words.find('.active').next().index() : 0;
-				rotate_words.find('.active').addClass('rotate-out').removeClass('rotate-in active');
-				rotate_words.find('span').eq(next_word_index).addClass('rotate-in active').removeClass('rotate-out');
-			},3000);
-		}
 		// ------------------------------
 		
 		
@@ -771,10 +783,4 @@ var $container, $blog_container;
 		NProgress.done();
 	}
 	// ------------------------------
-	
-	
-	
-	
-
-
-})(jQuery);
+});
