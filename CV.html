@@ -1,0 +1,167 @@
+<html><head><style>body {
+  font-family: Tahoma, Geneva, sans-serif; margin: 1em 2em 1em 2em; font-size: 10px; line-height: 110%;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: Trebuchet MS, Helvetica, sans-serif; font-weight: bold; line-height:100%; margin-top: 1.3em; margin-bottom: 0.5em;}
+h1 {font-size: 2.0em; color: #000000;}
+h2 {font-size: 1.2em; color: #404040; text-transform: uppercase;}
+h3 {font-size: 1.2em; color: #707070;}
+h4 {font-size: 1.1em; color: #909090;}
+h5 {font-size: 1.0em; color: #989898;}
+h6 {font-size: 1.0em; color: #9c9c9c;}
+p, pre, blockquote, table, ul, ol, dl {margin-top: 0.7em; margin-bottom: 0.7em;}
+ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
+li {margin: 0.3em auto;}
+ul {margin-left: 1em; padding-left: 0.1em;}
+dt {font-weight: bold;}
+img {border: none;}
+pre {border-left: 1px solid #ccc; margin-left: 2em; padding-left: 0.5em;}
+blockquote {padding: 0.4em; background-color: #f6f5eb;}
+th, td {border: 1px solid #ccc; padding: 0.3em;}
+th {background-color: #f0f0f0;}
+hr {border: none; border-top: 1px solid #ccc; width: 100%;}
+del {text-decoration: line-through; color: #777777;}
+.toc li {list-style-type: none;}
+.todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
+.justleft {text-align: left;}
+.justright {text-align: right;}
+.justcenter {text-align: center;}
+.center {margin-left: auto; margin-right: auto;}
+.tag {background-color: #eeeeee; font-family: monospace; padding: 2px;}
+.header a {text-decoration: none; color: inherit;}
+
+/* classes for items of todo lists */
+.rejected {
+    /* list-style: none; */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAACXBIWXMAAADFAAAAxQEdzbqoAAAAB3RJTUUH4QgEFhAtuWgv9wAAAPZQTFRFmpqam5iYnJaWnJeXnpSUn5OTopCQpoqKpouLp4iIqIiIrYCAt3V1vW1tv2xsmZmZmpeXnpKS/x4e/x8f/yAg/yIi/yQk/yUl/yYm/ygo/ykp/yws/zAw/zIy/zMz/zQ0/zU1/zY2/zw8/0BA/0ZG/0pK/1FR/1JS/1NT/1RU/1VV/1ZW/1dX/1pa/15e/19f/2Zm/2lp/21t/25u/3R0/3p6/4CA/4GB/4SE/4iI/46O/4+P/52d/6am/6ur/66u/7Oz/7S0/7e3/87O/9fX/9zc/93d/+Dg/+vr/+3t/+/v//Dw//Ly//X1//f3//n5//z8////gzaKowAAAA90Uk5T/Pz8/Pz8/Pz8/Pz8/f39ppQKWQAAAAFiS0dEEnu8bAAAAACuSURBVAhbPY9ZF4FQFEZPSKbIMmWep4gMGTKLkIv6/3/GPbfF97b3w17rA0kQOPgvAeHW6uJ6+5h7HqLdwowgOzejXRXBdx6UdSru216xuOMBHHNU0clTzeSUA6EhF8V8kqroluMiU6HKcuf4phGPr1o2q9kYZWwNq1qfRRmTaXpqsyjj17KkWCxKBUBgXWueHIyiAIg18gsse4KHkLF5IKIY10WQgv7fOy4ST34BRiopZ8WLNrgAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    background-position: 0 .2em;
+    padding-left: 1.5em;
+}
+.done0 {
+    /* list-style: none; */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAA7SURBVCiR7dMxEgAgCANBI3yVRzF5KxNbW6wsuH7LQ2YKQK1mkswBVERYF5Os3UV3gwd/jF2SkXy66gAZkxS6BniubAAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-position: 0 .2em;
+    padding-left: 1.5em;
+}
+.done1 {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABtSURBVCiR1ZO7DYAwDER9BDmTeZQMFXmUbGYpOjrEryA0wOvO8itOslFrJYAug5BMM4BeSkmjsrv3aVTa8p48Xw1JSkSsWVUFwD05IqS1tmYzk5zzae9jnVVVzGyXb8sALjse+euRkEzu/uirFomVIdDGOLjuAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    padding-left: 1.5em;
+}
+.done2 {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAB1SURBVCiRzdO5DcAgDAVQGxjAYgTvxlDIu1FTIRYAp8qlFISkSH7l5kk+ZIwxKiI2mIyqWoeILYRgZ7GINDOLjnmF3VqklKCUMgTee2DmM661Qs55iI3Zm/1u5h9sm4ig9z4ERHTFzLyd4G4+nFlVrYg8+qoF/c0kdpeMsmcAAAAASUVORK5CYII=);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    padding-left: 1.5em;
+}
+.done3 {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxQAAAMUBHc26qAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABoSURBVCiR7dOxDcAgDATA/0DtUdiKoZC3YhLkHjkVKF3idJHiztKfvrHZWnOSE8Fx95RJzlprimJVnXktvXeY2S0SEZRSAAAbmxnGGKH2I5T+8VfxPhIReQSuuY3XyYWa3T2p6quvOgGrvSFGlewuUAAAAABJRU5ErkJggg==);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    padding-left: 1.5em;
+}
+.done4 {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAYAAAAbBi9cAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAzgAAAM4BlP6ToAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIISURBVDiNnZQ9SFtRFMd/773kpTaGJoQk1im4VDpWQcTNODhkFBcVTCNCF0NWyeDiIIiCm82QoIMIUkHUxcFBg1SEQoZszSat6cdTn1qNue92CMbEr9Sey+XC/Z/zu+f8h6ukUil3sVg0+M+4cFxk42/jH2wAqqqKSCSiPQdwcHHAnDHH9s/tN1h8V28ETdP+eU8fT9Nt62ancYdIPvJNtsu87bmjrJlrTDVM4RROJs1JrHPrD4Bar7A6cpc54iKOaTdJXCUI2UMVrQZ0Js7YPN18ECKkYNQcJe/OE/4dZsw7VqNXQMvHy3QZXQypQ6ycrtwDjf8aJ+PNEDSCzLpn7+m2pD8ZKHlKarYhy6XjEoCYGcN95qansQeA3fNdki+SaJZGTMQIOoL3W/Z89rxv+tokubNajlvk/vm+LFpF2XnUKZHI0I+QrI7Dw0OZTqdzUkpsM7mZTyfy5OPGyw1tK7AFSvmB/Ks8w8YwbUYbe6/3QEKv0vugfxWPnMLJun+d/kI/WLdizpNjMbAIKrhMF4OuwadBALqqs+RfInwUvuNi+fBd+wjogfogAFVRmffO02q01mZZ0HHdgXIzdz0QQLPezIQygX6llxNKKgOFARYCC49CqhoHIUTlss/Vx2phlYwjw8j1CAlfAiwQiJpiy7o1VHnsG5FISkoJu7Q/2YmmaV+i0ei7v38L2CBguSi5AAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 0 .15em;
+    padding-left: 1.5em;
+}
+
+code {
+    font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 0px 3px;
+    display: inline-block;
+    color: #52595d;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+@media print {
+ /* All your print styles go here */
+ body {
+   margin: 0;
+ }
+
+ h1 {
+   margin-top: 0;
+ }
+}</style></head><body>
+<h1 id="stuart-john-david-quin">Stuart John David Quin</h1>
+<p>stuart.quin@gmail.com | https://github.com/stuartquin</p>
+<h2 id="october-2018---june-2019-full-stack-developer-credit-suisse-contract">October 2018 - June 2019, Full Stack Developer, Credit Suisse (Contract)</h2>
+<p>Lead developer on financial regulatory product using React and Python/Flask with SQL Alchemy</p>
+<ul>
+<li>Brought in as experienced React developer on team struggling with complex requirements</li>
+<li>Restructured application to better cope with large volumes of data on both front and back-end</li>
+<li>Updated hiring process to help find developers experienced in the correct technologies</li>
+</ul>
+<h2 id="july-2018---october-2018-full-stack-developer-rideto-ltd.-contract">July 2018 - October 2018, Full Stack Developer, RideTo Ltd. (Contract)</h2>
+<p>Working both remote and on-site. Helped a small development team release of a Motorbike lesson booking and management tool. Python/Django Rest Framework and React</p>
+<ul>
+<li>Sole developer of Embeddable booking widget with availability search and payment via Stripe SDK</li>
+<li>Client-side unit testing with Jest.</li>
+<li>Implemented release pipelines using Docker with Gitlab CI.</li>
+</ul>
+<h2 id="march-2018---july-2018-full-stack-developer-fenix-international-contract">March 2018 - July 2018, Full Stack Developer, Fenix International (Contract)</h2>
+<p>Worked remotely with a team based in Uganda to develop and Ionic 3/Angular 2 based mobile application with Python/Django back-end for sales-team</p>
+<ul>
+<li>Developed sales process management app targeting low-end Android devices</li>
+<li>Led the adoption of integration testing framework using protractor. Greatly reducing time spent regression testing during releases.</li>
+</ul>
+<h2 id="march-2017---december-2017-senior-frontend-developer-treatwell.co.uk-contract">March 2017 - December 2017, Senior Frontend Developer, Treatwell.co.uk (Contract)</h2>
+<p>Delivered complete re-implementation of client facing venue pages using React + ES6 with NodeJS backend. Working with mobile-first designs to ensure a smooth, responsive experience across devices.</p>
+<ul>
+<li>Converted custom state management solution to use Redux, introduced Storybooks and Jest for component testing.</li>
+<li>Updated dependencies including porting a large Webpack config from version 1 to 3.</li>
+<li>Introduced and subsequently trained a new full time developer.</li>
+</ul>
+<h2 id="august-2016---march-2017-senior-developer-skimlinks-ltd.-contract">August 2016 - March 2017, Senior Developer, Skimlinks Ltd. (Contract)</h2>
+<p>Worked with the internal devops team to port EC2 to a kubernetes cluster and replaced SQS with Cloud Pub/Sub.</p>
+<ul>
+<li>Created Docker and Kubernetes config for APIs written in Clojure and Ruby</li>
+<li>Set-up automated builds and demand (Pub/Sub size) based auto-scaling.</li>
+</ul>
+<h2 id="august-2016---present-senior-developer-petspyjamas.com-contract">August 2016 - Present, Senior Developer, Petspyjamas.com (Contract)</h2>
+<p>Full stack developer, Python/Django backend and ES6 React front-end. Created a travel search and booking system to simplify internal process.</p>
+<ul>
+<li>Added GraphQL (Graphene/Relay) layer on top of existing Django installation</li>
+<li>Created responsive (targeting tablets) frontend using React with Redux</li>
+</ul>
+<h2 id="october-2015---present-core-contributorpython-developer-pgcli-postgres-repl">October 2015 - Present, Core Contributor/Python Developer, pgcli PostGres REPL</h2>
+<p>A member of the core open source team. pgcli is an alternate command line interface for Postgres with syntax highlighting and autocompletion.</p>
+<ul>
+<li>Add new features including expanded display, command help and shell history password obfuscation.</li>
+<li>Take an active role in the community, performing code reviews and release planning.</li>
+</ul>
+<h2 id="march-2016---august-2016-senior-developer-arts-alliance-media-contract">March 2016 - August 2016, Senior Developer, Arts Alliance Media (Contract)</h2>
+<p>Python and JS developer on a cinema advertising management web application. The application is a CherryPy Python API, Postgres DB (with SQLAlchemy) and Backbone JS frontend.</p>
+<h2 id="june-2015---march-2016-senior-frontend-developer-kayako.com-contract">June 2015 - March 2016, Senior Frontend Developer, Kayako.com (Contract)</h2>
+<p>Javascript developer focusing on EmberJS with ES6. Developing user interface for customer and case management system that forms the core of Kayako's custom support service used by over 30,000 businesses.</p>
+<ul>
+<li>Integrated with Pusher using Websockets for real time updates</li>
+<li>Joined project suffering major delays and released alpha version within four months.</li>
+</ul>
+<h2 id="june-2014---june-2015-technical-lead-skimlinks-ltd.">June 2014 - June 2015, Technical Lead, Skimlinks Ltd.</h2>
+<p>Responsible for a team of 7 building a core data product. The product is based on Python/Flask using Apache Spark to process user and page visit data and provide advertising analytics to partners. As a manager grew the team from 2 to 7 developers to accelerate release plans for data product.</p>
+<ul>
+<li>Introduced regular one to one catch ups with team members to gather feedback and reinforce development.</li>
+<li>Provided technical sales and integration service for external partners.</li>
+</ul>
+<h2 id="august-2015---present-tech-mentor-just-add-red">August 2015 - Present, Tech Mentor, Just Add Red</h2>
+<h2 id="october-2011---june-2014-senior-developer-skimlinks-ltd">October 2011 - June 2014, Senior Developer, Skimlinks Ltd</h2>
+<h2 id="june-2010---october-2011-developer-openbet-ltd">June 2010 - October 2011 Developer, Openbet Ltd</h2>
+<h2 id="august-2008-october-2009-web-developer-design-by-front-belfast">August 2008 – October 2009 Web Developer Design by Front, Belfast</h2>
+<h2 id="masters-of-engineering-computer-science-queens-university-belfast">2005 - 2010 Masters of Engineering Computer Science, Queen’s University Belfast</h2>
+<ul>
+<li>1st Class Honours and Prize for highest overall result at level 2 with 96% in Data structures and Algorithms.</li>
+</ul>
+</body></html>
